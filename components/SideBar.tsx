@@ -1,11 +1,11 @@
 "use client";
 
-import { db } from "../firebase";
-import { signOut, useSession } from "next-auth/react";
+import NewChat from "./NewChat";
 import { useCollection } from "react-firebase-hooks/firestore";
-import NewChat from "../components/NewChat";
 import { collection } from "firebase/firestore";
-import ChatRow from "../components/ChatRow";
+import { db } from "../firebase";
+import ChatRow from "./ChatRow";
+import { signOut, useSession } from "next-auth/react";
 
 function SideBar() {
   const { data: session } = useSession();
